@@ -17,3 +17,4 @@ pickle-email-*.html
 Gemfile.lock
 .DS_Store
 *.gem
+.idea

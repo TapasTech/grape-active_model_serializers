@@ -6,7 +6,7 @@ module Grape
           serializer = fetch_serializer(resource, env)
 
           if serializer
-            ::ActiveModelSerializers::Adapter.create(serializer).to_json
+            ::ActiveModelSerializers::Adapter.create(serializer, env['ams_meta']).to_json
           else
             Grape::Formatter::Json.call resource, env
           end
